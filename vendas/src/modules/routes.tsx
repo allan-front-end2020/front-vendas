@@ -1,13 +1,10 @@
-// import { RouteObject } from "react-router-dom";
-// import LoginScreen from "./login/screens/LoginScreen";
+import { RouteObject } from 'react-router-dom';
 
+import LoginScreen from '../modules/login/';
 
-
-// export const loginRoutes: RouteObject[] =[
-//     {
-//         path: "/login",
-//         element: <LoginScreen />,
-//         errorElement: <div> erro</div>
-//     },
-
-// ];
+export const loginRoutes: RouteObject[] = [
+  {
+    path: '/login',
+    element: <LoginScreen />,
+  },
+];

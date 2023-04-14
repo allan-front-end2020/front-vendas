@@ -7,6 +7,8 @@ import axios from "axios"
 import Input from "../../../shared/inputs/InputData"
 import { BackgroundImage, ContainerLogin, ContainerLoginAll, LimetedContainer, LogoImg, TitleLogin } from "../styles/loginScreen.styles"
 import { ButtonAntd } from "../../../shared/button/Button.styles"
+import Footer from "../../../shared/footer/Footer";
+
 
 
 const LoginScreen = () => {
@@ -19,7 +21,7 @@ const LoginScreen = () => {
 
     const handleLogin = () => {
         alert(`username:  password: ${password}`);
-        const handleLogin = async () => {
+        const handleLogin: any = async () => {
             await axios({
                 method: 'post',
                 url: 'http://localhost:8080/auth',
@@ -48,12 +50,14 @@ const LoginScreen = () => {
                     <LimetedContainer>
                         <LogoImg src='./ufla.png' alt="logo" />
                         <TitleLogin level={2} type="success">Tela de Login</TitleLogin>
-                        <Input title="Usuário :" margin="32px 0px 0px"  value={email} />
+                        <Input title="Usuário :" margin="32px 0px 0px" />
                         <Input title='Senha :' margin="32px 0px 0px" />
                         <ButtonAntd type="primary"  >ENTRAR</ButtonAntd>
                     </LimetedContainer>
                 </ContainerLogin >
             </ContainerLoginAll>
+
+            <Footer />
 
         </div>
     )
@@ -64,3 +68,8 @@ function setEmail() {
     throw new Error("Function not implemented.");
 }
 
+const a = 6 + 4 + 4 + 4 + 4 + 4 + 2
+const b = 4 * 8 + 2 + 2
+
+console.log("cursando", a)
+console.log("cursado", b)
